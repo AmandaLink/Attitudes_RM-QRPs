@@ -63,25 +63,6 @@ flush.console()
 # loading spinner aestestics
 options(spinner.color = "#4682B4", spinner.color.background = "#ffffff", spinner.size = 2)
 
-## Function ---------------------------------------------------------------
-
-# Function to add plots to table 
-
-
-plot_hist <- function(practice, data) {
-  data %>% dplyr::filter(Item_full == practice) %>%
-    ggplot(aes(x = QRP_rating)) +
-    geom_bar() +
-    scale_x_continuous(breaks = c(1:7),
-                       labels = c("1\n = Completely\nunacceptable", 2, 3, 
-                                  "4\n = Neutral", 5, 6, "7\n = Completely\nacceptable")) +
-    labs(
-      x = "",
-      y = ""
-    ) +
-    theme_classic()
-}
-
 
 ## Load objects   ----------------------------------------------------------
 
@@ -220,7 +201,7 @@ if (is.null(sub_tbl_hum)) {
 }
 
 
-### Extra (For filters)
+### Filter objects
 
 items <- all$practice
 
