@@ -16,6 +16,10 @@ RUN apt-get update && \
         make \
         libgl1-mesa-dev \
         libglu1-mesa-dev \
+        libgdal-dev \
+        libgeos-dev \
+        libproj-dev \
+        libudunits2-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -40,6 +44,7 @@ RUN if id shiny &>/dev/null && [ "$(id -u shiny)" -ne 999 ]; then \
 # Other settings
 USER shiny
 EXPOSE 3838
+
 
 
 
