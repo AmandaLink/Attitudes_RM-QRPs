@@ -3,7 +3,6 @@ FROM rocker/shiny:4.5.1
 
 # General updates
 RUN apt-get update && \
-    apt-get upgrade -y && \
     apt-get install -y git libxml2-dev libmagick++-dev libssl-dev libharfbuzz-dev libfribidi-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -16,7 +15,7 @@ RUN Rscript -e 'setwd("/srv/shiny-server/");renv::restore();'
 
 # Copy the app files (scripts, data, etc.)
 RUN rm -rf /srv/shiny-server/*
-COPY /app/ /srv/shiny-server/
+COPY app/app.R /srv/shiny-server/app.R
 
 # Ensure that the expected user is present in the container
 RUN if id shiny &>/dev/null && [ "$(id -u shiny)" -ne 999 ]; then \
@@ -29,5 +28,6 @@ RUN if id shiny &>/dev/null && [ "$(id -u shiny)" -ne 999 ]; then \
 # Other settings
 USER shiny
 EXPOSE 3838
+
 
 
