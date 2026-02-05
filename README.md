@@ -13,5 +13,4 @@ The dashboard code (app.R) is made public under a MIT license (see LICENSE file)
 
 ## Contact
 
-The dashboard was built by [AmandaLink](https://github.com/AmandaLink)  
-ORCID: [0000-0002-3984-5081](https://orcid.org/0000-0002-3984-5081)
+The dashboard was built by [AmandaLink](https://github.com/AmandaLink)  (ORCID: [0000-0002-3984-5081](https://orcid.org/0000-0002-3984-5081))
