@@ -5,11 +5,15 @@ on:
   push:
     branches:
       - main
-        paths:
+    paths:
       - 'Dockerfile'        # rebuild if Dockerfile changes
       - '**/*.R'            # rebuild if any R files change
       - 'app/**'            # rebuild if files in app folder change
       - 'renv.lock'         # rebuild if R dependencies change
+
+concurrency:
+  group: docker-build-main
+  cancel-in-progress: true
 
 jobs:
   build:
