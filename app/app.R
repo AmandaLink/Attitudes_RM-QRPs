@@ -393,7 +393,7 @@ ui <- fluidPage(
       ),
       hr(),
       p(
-        "All content on this app is made public under CC BY-NC 4.0 license. "
+        "All content on this dashboard is made public under CC BY-NC 4.0 license. The dashboard was created by Amanda M. Lindkvist."
       )
     ),
     
@@ -444,7 +444,7 @@ ui <- fluidPage(
       ),
       hr(),
       p(
-        "All content on this app is made public under CC BY-NC 4.0 license. "
+        "All content on this dashboard is made public under CC BY-NC 4.0 license. The dashboard was created by Amanda M. Lindkvist."
       )
     ),
     
@@ -497,7 +497,7 @@ ui <- fluidPage(
       ),
       hr(),
       p(
-        "All content on this app is made public under CC BY-NC 4.0 license. "
+        "All content on this dashboard is made public under CC BY-NC 4.0 license. The dashboard was created by Amanda M. Lindkvist."
       )
     ),
     
@@ -542,7 +542,7 @@ ui <- fluidPage(
       ),
       hr(),
       p(
-        "All content on this app is made public under CC BY-NC 4.0 license. "
+        "All content on this dashboard is made public under CC BY-NC 4.0 license. The dashboard was created by Amanda M. Lindkvist."
       )
     ),
     
@@ -594,7 +594,7 @@ ui <- fluidPage(
       ),
       hr(),
       p(
-        "All content on this app is made public under CC BY-NC 4.0 license. "
+        "All content on this dashboard is made public under CC BY-NC 4.0 license. The dashboard was created by Amanda M. Lindkvist."
       )
     ),
     
@@ -613,7 +613,7 @@ ui <- fluidPage(
             style = "background: white",
             condition = "!input.hide_sidebar_page5", 
           wellPanel(style = "background: white",
-            tags$p("Click on a research field in the legend to hide the points from that field.",
+            tags$p("Click on a research field in the right-hand legend to hide or display the points from that field.",
                    tags$br(), " ",
                    tags$br(), "The two-dimensional layout was generated using Uniform Manifold Approximation and Projection (UMAP) and illustrates similarity between research fields and subfields in acceptability ratings of the 52 items.",
                    tags$br(), " ",
@@ -633,7 +633,7 @@ ui <- fluidPage(
       ),
       hr(),
       p(
-        "All content on this app is made public under CC BY-NC 4.0 license. "
+        "All content on this dashboard is made public under CC BY-NC 4.0 license. The dashboard was created by Amanda M. Lindkvist."
       )
     )
     
@@ -660,7 +660,7 @@ server <- function(input, output, session) {
     tagList(
       h2("Project information"),
       p(
-        "This app presents the findings of a research project about attitudes towards research misconduct (RM) and questionable research practices (QRPs)."
+        "This dashboard presents the findings of a research project about attitudes towards research misconduct (RM) and questionable research practices (QRPs)."
       ),
       p(
         "With this project, we provide a comprehensive overview of attitudes towards research integrity among researchers 
@@ -679,7 +679,7 @@ server <- function(input, output, session) {
         Members of the Ethical Review Authority in Sweden were invited through e-mail to the web-based survey, response rate = 34.5%, total N = 144. 
         The 'Sample Descriptives' page gives an overview of both samples."),
       p(
-        "The survey items reported in this app are attiudinal measures towards 52 different research practices, 
+        "The survey items reported in this dashboard are attiudinal measures towards 52 different research practices, 
         including clear research misconduct (Falsifying data and Plagiarism) and a diverse set of QRPs." ),
       br()
     )
@@ -688,20 +688,111 @@ server <- function(input, output, session) {
   
   output$centered_text_right <- renderUI({
     tagList(
-      h2("Links and contact info"),
+      h2("Links"),
+      h4(
+        "Article:",
+        a(
+          "Lindkvist, A. M., Koppel, L., Andersson, D., Västfjäll, D., & Tinghög, G. (2026).
+        Is research ethics discipline-specific? A survey of researchers’ and ethics reviewers’ views on research misconduct and questionable practices.
+        Research Policy.",
+          href = "https://doi.org/10.1016/j.respol.2026.105435",
+          target = "_blank"
+        )
+      ),
       br(),
       br(),
-      h3(
-        "Article:", a("", href = "")
+      h4(
+        "OSF project page:",
+        a(
+          "https://osf.io/hw8zf/",
+          href = "https://osf.io/hw8zf/",
+          target = "_blank"
+        )
+      ),
+      h4(
+        "Dashboard Github page:",
+        a(
+          "https://github.com/AmandaLink/Attitudes_RM-QRPs",
+          href = "https://github.com/AmandaLink/Attitudes_RM-QRPs",
+          target = "_blank"
+        )
+      ),
+      br(),
+      br(),
+      h2("Contributors:"),
+      h5(
+        "Amanda M. Lindkvist (",
+        a(
+          "Linköping University profile, ",
+          href = "https://liu.se/en/employee/amali09",
+          target = "_blank"
+        ),
+        a(
+          "ORCID",
+          href = "https://orcid.org/0000-0002-3984-5081",
+          target = "_blank"
+        ),
+        ")"
+      ),
+      h5(
+        "Lina Koppel (",
+        a(
+          "Linköping University profile, ",
+          href = "https://liu.se/en/employee/linko72",
+          target = "_blank"
+        ),
+        a(
+          "ORCID",
+          href = "https://orcid.org/0000-0002-6302-0047",
+          target = "_blank"
+        ),
+        ")"
+      ),
+      h5(
+        "David Andersson (",
+        a(
+          "Linköping University profile",
+          href = "https://liu.se/en/employee/davan75",
+          target = "_blank"
+        ),
+        ")"
+      ),
+      h5(
+        "Daniel Västfjäll (",
+        a(
+          "Linköping University profile, ",
+          href = "https://liu.se/en/employee/danva85",
+          target = "_blank"
+        ),
+        a(
+          "ORCID",
+          href = "https://orcid.org/0000-0003-2873-4500",
+          target = "_blank"
+        ),
+        ")"
+      ),
+      h5(
+        "Gustav Tinghög (",
+        a(
+          "Linköping University profile, ",
+          href = "https://liu.se/en/employee/gusti22",
+          target = "_blank"
+        ),
+        a(
+          "ORCID",
+          href = "https://orcid.org/0000-0002-8159-1249",
+          target = "_blank"
+        ),
+        ")"
       ),
       br(),
       br(),
       br(),
       p(" "),
-      p(" "),
-      
+      p(" ")
     )
   })
+  
   
   
   ## "Sample descriptives" page -------------------------------------------------------
