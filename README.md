@@ -7,4 +7,11 @@ The underlying aggregated data used for the app is located in the app folder, as
 
 In addition, this repository contains commands to build an image with the app code and data (see Dockerfile for settings) and to push to DockerHub through GitHub actions (see .github/workflows/docker-image.yml for settings).
 
+## License
+
+The dashboard code (app.R) is made public under a MIT license (see LICENSE file). The .csv and .rds objects are made public under a CC BY-NC 4.0 license. 
+
 ## Contact
+
+The dashboard was built by [AmandaLink](https://github.com/AmandaLink)  
+ORCID: [0000-0002-3984-5081](https://orcid.org/0000-0002-3984-5081)
