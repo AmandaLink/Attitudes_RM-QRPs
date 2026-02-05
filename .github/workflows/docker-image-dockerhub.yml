@@ -1,6 +1,5 @@
 name: Create and publish a Docker image to hub.docker.com
 
-
 on:
   push:
     branches:
@@ -8,7 +7,6 @@ on:
     paths:
       - 'Dockerfile'        # rebuild if Dockerfile changes
       - '**/*.R'            # rebuild if any R files change
-      - 'app/**'            # rebuild if files in app folder change
       - 'renv.lock'         # rebuild if R dependencies change
 
 concurrency:
@@ -20,16 +18,23 @@ jobs:
     if: github.repository == 'AmandaLink/Attitudes_RM-QRPs'
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repo
       - uses: actions/checkout@v3
+
+      # Set date and time as Docker image tag
       - name: Set date and time as tag
         id: set_tag
-        run: echo "TAG=$(TZ="Europe/Stockholm" date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
-        
+        run: echo "TAG=$(TZ='Europe/Stockholm' date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
+
+      # Build the Docker image
       - name: Build Docker image
         run: docker build -t amandalink/qrp:$TAG -f Dockerfile .
-        
+
+      # Login to Docker Hub
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-        
+
+      # Push Docker image to Docker Hub
       - name: Publish to Docker Hub
         run: docker push amandalink/qrp:$TAG
+
