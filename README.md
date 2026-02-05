@@ -5,11 +5,11 @@ The dashboard is built using R (4.5.1) with Shiny. The code of the Shiny app can
 
 The underlying aggregated data used for the app is located in the app folder, as .csv and .rds objects.
 
-In addition, this repository contains commands to build an image with the app code and data (see Dockerfile for settings) and to push to DockerHub through GitHub actions (see .github/workflows/docker-image.yml for settings).
+In addition, this repository contains commands to build an image with the app code and data (see Dockerfile for settings) and to push to DockerHub through GitHub actions (see .github/workflows/docker-image.yml for settings). The Dockerfile and github workflow files were adapted from the example Shiny app *shiny-adhd-medication-sweden* by the SciLifeLab Data Centre, Original repository: https://github.com/ScilifelabDataCentre/shiny-adhd-medication-sweden (MIT License) :contentReference[oaicite:0]{index=0}
 
 ## License
 
-The dashboard code (app.R) is made public under a MIT license (see LICENSE file). The .csv and .rds objects are made public under a CC BY-NC 4.0 license. 
+The dashboard code (app.R) is made public under a MIT license (see LICENSE file). The associated .csv and .rds objects are made public under a CC BY-NC 4.0 license. 
 
 ## Contact
 
