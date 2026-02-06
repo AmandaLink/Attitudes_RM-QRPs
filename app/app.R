@@ -755,6 +755,11 @@ server <- function(input, output, session) {
           href = "https://liu.se/en/employee/davan75",
           target = "_blank"
         ),
+        a(
+          "ORCID",
+          href = "https://orcid.org/0000-0003-2495-7125",
+          target = "_blank"
+        ),
         ")"
       ),
       h5(
