@@ -751,7 +751,7 @@ server <- function(input, output, session) {
       h5(
         "David Andersson (",
         a(
-          "Linköping University profile",
+          "Linköping University profile, ",
           href = "https://liu.se/en/employee/davan75",
           target = "_blank"
         ),
