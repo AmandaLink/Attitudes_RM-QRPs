@@ -709,6 +709,7 @@ server <- function(input, output, session) {
           target = "_blank"
         )
       ),
+      br(),
       h4(
         "Dashboard Github page:",
         a(
